@@ -1,0 +1,31 @@
+#slicing basics
+s=[1,2,3,4,5]
+print(s[1:4])
+print(s[:3])
+print(s[2:])
+print(s[::-1])
+print(s[-3:-1])
+#shallow copy and deep copy
+import copy
+original=[[1,2],[3,4]]
+sh=original.copy()
+de=copy.deepcopy(original)
+original[0][0]=99
+print("Original Copy:",original)
+print("Shallow Copy:",sh)
+print("Deep Copy:",de)
+#edge cases
+#emptylistslicing
+print([][:])
+#slicingbeyondrange
+print([1,2,3][1:10])
+#shallowcopyedge
+a=[[1],[2]]
+b=a[:]
+a[0][0]=50
+print(b)
+#immutablevsmiutable
+x=(1,2,3)
+y=x[:]
+print(x is y)
+
