@@ -1,0 +1,28 @@
+A=set(map(int,input("Enter the elements of set A: ").split()))
+B=set(map(int,input("Enter the elements of set B: ").split()))
+print("Set A:",A)
+print("Set B: ",B)
+print("SET OPERATIONS")
+print("1.Union")
+print("2.Intersection")
+print("3.Difference (A-B)")
+print("4.Difference(B-A)")
+print("5.Symmetric Difference")
+print("6.Check subset")
+
+x=int(input("Enter your choice: "))
+if x==1:
+    print("Union:",A|B)
+elif x==2:
+    print("Intersection:",A&B)
+elif x==3:
+    print("Difference(A-B):",A-B)
+elif x==4:
+    print("Difference(B-A):",B-A)
+elif x==5:
+    print("Symmetric Difference:",A^B)
+elif x==6:
+    print("A is subset of B", A.issubset(B))
+    print("B is subset of A:",B.issubset(A))
+else:
+    print("Invalid choice.")
